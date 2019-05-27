@@ -3,7 +3,7 @@
     "description": "WsPay adapter for omnipay",
     "keywords": [
         "omnipay",
-        ":gateway"
+        "wspay"
     ],
     "homepage": "https://github.com/dodo-it/omnipay-wspay",
     "license": "MIT",
