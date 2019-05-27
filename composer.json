@@ -1,21 +1,19 @@
 {
-    "name": ":vendor/omnipay-:gateway",
-    "description": ":package_description",
+    "name": "dodo-it/omnipay-wspay",
+    "description": "WsPay adapter for omnipay",
     "keywords": [
         "omnipay",
         ":gateway"
     ],
-    "homepage": "https://github.com/:vendor/omnipay-:gateway",
+    "homepage": "https://github.com/dodo-it/omnipay-wspay",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website"
+            "name": "Nikola Škundrić",
         }
     ],
     "require": {
-        "omnipay/common": "v3.0-alpha.2"
+        "omnipay/common": "v3.0"
     },
     "require-dev": {
         "omnipay/tests": "~3.0",
@@ -24,12 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Omnipay\\Skeleton\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "League\\Skeleton\\Test\\": "tests"
+            "Omnipay\\WsPay\\": "src"
         }
     },
     "scripts": {
