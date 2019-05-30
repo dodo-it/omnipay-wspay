@@ -125,7 +125,7 @@ abstract class AbstractRequest extends BaseAbstractRequest
 	{
 		return $this->setParameter('IntCurrency', $value);
 	}
-	
+
 
     public function sendData($data)
     {
