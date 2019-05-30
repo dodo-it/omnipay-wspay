@@ -96,6 +96,37 @@ abstract class AbstractRequest extends BaseAbstractRequest
 		return $this->getParameter('CancelURL');
 	}
 
+	public function getLang()
+	{
+		return $this->getParameter('Lang');
+	}
+
+	public function setLang(string $value)
+	{
+		return $this->setParameter('Lang', $value);
+	}
+
+	public function getIntAmount()
+	{
+		return $this->getParameter('IntAmount');
+	}
+
+	public function setIntAmount(string $value)
+	{
+		return $this->setParameter('IntAmount', $value);
+	}
+
+	public function getIntCurrency()
+	{
+		return $this->getParameter('IntCurrency');
+	}
+
+	public function setIntCurrency(string $value)
+	{
+		return $this->setParameter('IntCurrency', $value);
+	}
+	
+
     public function sendData($data)
     {
         $url = $this->getEndpoint().'?'.http_build_query($data, '', '&');
