@@ -126,6 +126,11 @@ class Gateway extends AbstractGateway
 		return $this->setParameter('IntCurrency', $value);
 	}
 
+	public function setPaymentPlan(string $value)
+	{
+		return $this->setParameter('PaymentPlan', $value);
+	}
+
 	public function purchase(array $parameters = array())
 	{
 		return $this->createRequest(PurchaseRequest::class, $parameters);

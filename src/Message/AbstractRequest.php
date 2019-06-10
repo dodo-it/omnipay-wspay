@@ -126,6 +126,10 @@ abstract class AbstractRequest extends BaseAbstractRequest
 		return $this->setParameter('IntCurrency', $value);
 	}
 
+	public function getPaymentPlan()
+	{
+		return $this->getParameter('PaymentPlan');
+	}
 
     public function sendData($data)
     {
