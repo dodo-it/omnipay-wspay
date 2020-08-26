@@ -18,7 +18,11 @@ class PurchaseRequest extends AbstractRequest
 		$data['IntAmount'] = $this->getIntAmount();
 		$data['IntCurrency'] = $this->getIntCurrency();
 		$data['Lang'] = $this->getLang();
-		$data['PaymentPlan'] = $this->getPaymentPlan();
+		$data['CustomerFirstName'] = $this->getCustomerFirstName();
+		$data['CustomerLastName'] = $this->getCustomerLastName();
+		$data['CustomerEmail'] = $this->getCustomerEmail();
+		$data['CustomerPhone'] = $this->getCustomerPhone();
+		$data['CustomerCountry'] = $this->getCustomerCountry();
 		return $data;
 	}
 

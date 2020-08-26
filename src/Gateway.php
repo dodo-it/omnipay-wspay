@@ -141,4 +141,54 @@ class Gateway extends AbstractGateway
 		return str_replace(",", "", $amount);
 	}
 
+	public function getCustomerFirstName()
+	{
+		return $this->getParameter('CustomerFirstName');
+	}
+
+	public function setCustomerFirstName($value)
+	{
+		return $this->setParameter('CustomerFirstName', $value);
+	}
+
+	public function getCustomerLastName()
+	{
+		return $this->getParameter('CustomerLastName');
+	}
+
+	public function setCustomerLastName($value)
+	{
+		return $this->setParameter('CustomerLastName', $value);
+	}
+
+	public function getCustomerEmail()
+	{
+		return $this->getParameter('CustomerEmail');
+	}
+
+	public function setCustomerEmail($value)
+	{
+		return $this->setParameter('CustomerEmail', $value);
+	}
+
+	public function getCustomerPhone()
+	{
+		return $this->getParameter('CustomerPhone');
+	}
+
+	public function setCustomerPhone($value)
+	{
+		return $this->setParameter('CustomerPhone', $value);
+	}
+
+	public function getCustomerCountry()
+	{
+		return $this->getParameter('CustomerCountry');
+	}
+
+	public function setCustomerCountry($value)
+	{
+		return $this->setParameter('CustomerCountry', $value);
+	}
+
 }
