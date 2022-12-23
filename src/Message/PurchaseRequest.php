@@ -23,7 +23,8 @@ class PurchaseRequest extends AbstractRequest
 		$data['CustomerEmail'] = $this->getCustomerEmail();
 		$data['CustomerPhone'] = $this->getCustomerPhone();
 		$data['CustomerCountry'] = $this->getCustomerCountry();
-		return $data;
+        $data['Version'] = '2.0';
+        return $data;
 	}
 
 	public function sendData($data)
