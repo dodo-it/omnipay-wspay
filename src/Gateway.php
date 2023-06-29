@@ -4,6 +4,7 @@ namespace Omnipay\WsPay;
 
 use Omnipay\Common\AbstractGateway;
 use Omnipay\WsPay\Message\PurchaseRequest;
+use Omnipay\WsPay\Message\StatusCheckRequest;
 
 class Gateway extends AbstractGateway
 {
@@ -86,6 +87,13 @@ class Gateway extends AbstractGateway
 		return $this->setParameter('Signature', $signature);
 	}
 
+    public function setStatusCheckSignature(string $shopId, string $secretKey, string $shoppingCartId)
+    {
+        $signature = hash('sha512', $shopId . $secretKey . $shoppingCartId . $secretKey . $shopId . $shoppingCartId);
+
+        return $this->setParameter('Signature', $signature);
+    }
+
 	public function getTotalAmount()
 	{
 		return $this->getParameter('TotalAmount');
@@ -135,6 +143,11 @@ class Gateway extends AbstractGateway
 	{
 		return $this->createRequest(PurchaseRequest::class, $parameters);
 	}
+
+    public function statusCheck(array $parameters = array())
+    {
+        return $this->createRequest(StatusCheckRequest::class, $parameters);
+    }
 
 	private function getFormatedPrice(string $amount)
 	{
