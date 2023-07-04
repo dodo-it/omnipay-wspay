@@ -11,7 +11,11 @@ class StatusCheckResponse extends AbstractResponse implements MessageInterface
 
     public function isSuccessful(): bool
     {
-        return false;
+        if (!isset($this->data['Completed'])) {
+            return false;
+        }
+
+        return (bool) $this->data['Completed'];
     }
 
 }
