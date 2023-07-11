@@ -24,6 +24,11 @@ class PurchaseRequest extends AbstractRequest
 		$data['CustomerPhone'] = $this->getCustomerPhone();
 		$data['CustomerCountry'] = $this->getCustomerCountry();
         $data['Version'] = '2.0';
+
+        $data = array_filter($data, function ($value) {
+            return $value !== null;
+        });
+
         return $data;
 	}
 
