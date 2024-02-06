@@ -204,4 +204,24 @@ class Gateway extends AbstractGateway
 		return $this->setParameter('CustomerCountry', $value);
 	}
 
+    public function setIframe($value)
+    {
+        return $this->setParameter('Iframe', $value);
+    }
+
+    public function setIframeIframeResponseTarget($value)
+    {
+        return $this->setParameter('IframeResponseTarget', $value);
+    }
+
+    public function getIframe()
+    {
+        return $this->getParameter('Iframe');
+    }
+
+    public function getIframeResponseTarget()
+    {
+        return $this->getParameter('IframeResponseTarget');
+    }
+
 }

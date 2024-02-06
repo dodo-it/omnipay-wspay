@@ -186,6 +186,26 @@ abstract class AbstractRequest extends BaseAbstractRequest
 		return $this->setParameter('CustomerCountry', $value);
 	}
 
+    public function getIframe()
+    {
+        return $this->getParameter('Iframe');
+    }
+
+    public function getIframeResponseTarget()
+    {
+        return $this->getParameter('IframeResponseTarget');
+    }
+
+    public function setIframe($value)
+    {
+        return $this->setParameter('Iframe', $value);
+    }
+
+    public function setIframeResponseTarget($value)
+    {
+        return $this->setParameter('IframeResponseTarget',$value);
+    }
+
     public function sendData($data)
     {
         $url = $this->getEndpoint().'?'.http_build_query($data, '', '&');

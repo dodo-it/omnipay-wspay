@@ -25,6 +25,11 @@ class PurchaseRequest extends AbstractRequest
 		$data['CustomerCountry'] = $this->getCustomerCountry();
         $data['Version'] = '2.0';
 
+        if ($this->getIframe()) {
+            $data['Iframe'] = $this->getIframe();
+            $data['IframeResponseTarget'] = $this->getIframeResponseTarget();
+        }
+
         $data = array_filter($data, function ($value) {
             return $value !== null;
         });
